@@ -9,10 +9,14 @@ const InputContent = () => {
   const { setCity } = useValueContext();
   const [cityInput, setInputCity] = useState("");
 
-  const handleGetCity = () => {
+  const handleGetCity = (event) => {
     setCity(cityInput);
     cityInput && history.push("/resultSearch");
     setInputCity("");
+  };
+
+  const handleKeyPress = (event) => {
+    event.key === "Enter" && handleGetCity();
   };
 
   return (
@@ -20,10 +24,12 @@ const InputContent = () => {
       <Label>Cidade: </Label>
       <Content>
         <InputCity
+          onKeyPress={handleKeyPress}
           value={cityInput}
           type="text"
           onChange={(e) => setInputCity(e.target.value)}
         />
+        
         <ButtonSearch onClick={handleGetCity}>
           <SearchAlt className="iconButton" />
         </ButtonSearch>

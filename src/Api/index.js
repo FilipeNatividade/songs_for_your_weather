@@ -1,7 +1,9 @@
 import axios from "axios";
 
-const Api = axios.create({
+export const ApiWeather = axios.create({
   baseURL: "https://api.openweathermap.org",
 });
 
-export default Api;
+export const ApiShazam = axios.create({
+  baseURL: "https://shazam.p.rapidapi.com/search",
+});

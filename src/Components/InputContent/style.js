@@ -19,6 +19,8 @@ export const Content = styled.div`
 `;
 export const InputCity = styled.input`
   border-radius: 5px;
+  font-size: 22px;
+  font-weight: bolder;
   height: 35px;
   padding: 0 15px;
   margin-right: 10px;
