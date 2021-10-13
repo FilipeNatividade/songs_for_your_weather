@@ -10,9 +10,11 @@ export const ButtonContainer = styled.div`
 `;
 
 export const BackButton = styled.button`
+  background-color: transparent;
+  margin-left: -30px;
   .backButton {
-    color: #e61d75;
-    width: 30px;
+    color: #fff;
+    width: 50px;
   }
 `;
 
@@ -42,7 +44,7 @@ export const TempContainer = styled.div`
 
 export const Temp = styled.p`
   border-right: 5px solid #fff;
-  font-size: 50px;
+  font-size: 40px;
   margin-right: 10px;
   padding-right: 10px;
 `;
