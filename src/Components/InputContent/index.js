@@ -9,7 +9,7 @@ const InputContent = () => {
   const { setCity } = useValueContext();
   const [cityInput, setInputCity] = useState("");
 
-  const handleGetCity = (event) => {
+  const handleGetCity = () => {
     setCity(cityInput);
     cityInput && history.push("/resultSearch");
     setInputCity("");
@@ -29,7 +29,7 @@ const InputContent = () => {
           type="text"
           onChange={(e) => setInputCity(e.target.value)}
         />
-        
+
         <ButtonSearch onClick={handleGetCity}>
           <SearchAlt className="iconButton" />
         </ButtonSearch>

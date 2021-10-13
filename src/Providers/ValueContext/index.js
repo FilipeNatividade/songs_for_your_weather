@@ -12,7 +12,7 @@ export const ValueProvider = ({ children }) => {
     temp_max: "",
     temp_min: "",
   });
-  console.log(data)
+  const [catchError, setCatchError] = useState(false);
 
   return (
     <ValueContext.Provider
@@ -21,6 +21,8 @@ export const ValueProvider = ({ children }) => {
         setCity,
         data,
         setData,
+        catchError,
+        setCatchError,
       }}
     >
       {children}

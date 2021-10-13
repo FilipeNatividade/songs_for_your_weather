@@ -5,5 +5,5 @@ export const ApiWeather = axios.create({
 });
 
 export const ApiShazam = axios.create({
-  baseURL: "https://shazam.p.rapidapi.com/search",
+  baseURL: "https://shazam.p.rapidapi.com",
 });
