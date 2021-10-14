@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
+
+
 export const Container = styled.div`
   color: #e61d75;
-  padding: 25px;
 `;
 
 export const ButtonContainer = styled.div`
@@ -11,7 +12,8 @@ export const ButtonContainer = styled.div`
 
 export const BackButton = styled.button`
   background-color: transparent;
-  margin-left: -30px;
+  margin-left: -15px;
+  margin-top: 25px;
   .backButton {
     color: #fff;
     width: 50px;
@@ -38,7 +40,7 @@ export const TempContainer = styled.div`
   display: flex;
   height: 250px;
   justify-content: center;
-  margin-top: 25px;
+  margin: 25px auto;
   width: 250px;
 `;
 
