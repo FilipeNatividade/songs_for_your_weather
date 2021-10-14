@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useHistory } from "react-router";
-import { ApiWeather, ApiShazam } from "../../Api";
 import { useValueContext } from "../../Providers/ValueContext";
+import ButtonFavorite from "../../Components/ButtonFavorite";
 import MessageError from "../../Components/MessageError";
 import { ArrowIosBack } from "@styled-icons/evaicons-solid/ArrowIosBack";
 import CardMusic from "../../Components/CardMusic";
@@ -14,26 +14,25 @@ import {
   TempContainer,
   Temp,
   TempMinMax,
+  CardContainer,
+  BartButton,
 } from "./style";
 
 const ResultSearch = () => {
   const history = useHistory();
   const {
-    city,
     setCity,
     data,
-    setData,
     catchError,
     setCatchError,
     playList,
-    setPlayList,
-    salve,
-    setSalve,
+    save,
+    setSave,
     favoriteList,
-    SetFavoriteList,
     genre,
-    setGenre,
   } = useValueContext();
+
+  const [heart, setHeart] = useState(false);
 
   const handleBackPage = () => {
     setCity("");
@@ -41,8 +40,9 @@ const ResultSearch = () => {
     history.push("/");
   };
 
-  const handleFavorite =() => {
-    setSalve([...salve, favoriteList]);
+  const handleFavorite = () => {
+    setHeart(!heart);
+    setSave([...save, favoriteList]);
   };
 
   return (
@@ -55,6 +55,7 @@ const ResultSearch = () => {
             <BackButton onClick={handleBackPage} title="Voltar">
               <ArrowIosBack className="backButton" />
             </BackButton>
+            <ButtonFavorite />
           </ButtonContainer>
           <Header>
             <h2>
@@ -68,10 +69,14 @@ const ResultSearch = () => {
               </TempMinMax>
             </TempContainer>
           </Header>
-          <div>
-            <button onClick={handleFavorite}>
-              <FavoriteBorder style={{ width: "25px" }} />
-            </button>
+          <CardContainer>
+            <BartButton onClick={handleFavorite}>
+              {heart ? (
+                <Favorite className="iconHeart" />
+              ) : (
+                <FavoriteBorder className="iconHeart" />
+              )}
+            </BartButton>
             {playList.map((music) => (
               <CardMusic
                 key={music.track.key}
@@ -81,7 +86,38 @@ const ResultSearch = () => {
                 href={music.track.sharehref}
               />
             ))}
-          </div>
+
+            <CardMusic
+              image={"https://picsum.photos/200        "}
+              subject={"titletitletitletitletitletitletitletitletitle"}
+              genre={"rocl"}
+              href={"https://google.com.br"}
+            />
+            <CardMusic
+              image={"https://picsum.photos/200        "}
+              subject={"title"}
+              genre={"rocl"}
+              href={"https://google.com.br"}
+            />
+            <CardMusic
+              image={"https://picsum.photos/200        "}
+              subject={"title"}
+              genre={"rocl"}
+              href={"https://google.com.br"}
+            />
+            <CardMusic
+              image={"https://picsum.photos/200        "}
+              subject={"title"}
+              genre={"rocl"}
+              href={"https://google.com.br"}
+            />
+            <CardMusic
+              image={"https://picsum.photos/200        "}
+              subject={"title"}
+              genre={"rocl"}
+              href={"https://google.com.br"}
+            />
+          </CardContainer>
         </Container>
       )}
     </>

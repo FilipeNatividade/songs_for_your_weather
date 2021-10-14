@@ -11,6 +11,5 @@ export const Container = styled.button`
   letter-spacing: 1.5px;
   margin-top: 25px;
   padding: 0 15px;
-  max-width: 350px;
-  width: 100%;
+  width: 200px;
 `;

@@ -1,16 +1,12 @@
-// import { useValueContext } from "../../Providers/ValueContext";
-import { Link } from "react-router-dom";
-// import { CloseCircleOutline } from "@styled-icons/evaicons-outline/CloseCircleOutline";
-import { Container, Coverart } from "./style";
-// import { useHistory } from "react-router";
+import { Container, Coverart, Title, GenreParagraph, ShazamA } from "./style";
 
-const CardMusic = ({ image, subject,genre, href }) => {
+const CardMusic = ({ image, subject, genre, href }) => {
   return (
     <Container>
       <Coverart src={image} alt={subject} />
-      <h2>{subject}</h2>
-      <p>{genre}</p>
-      <a href={href}>shazam</a>
+      <Title>{subject}</Title>
+      <GenreParagraph>{genre}</GenreParagraph>
+      <ShazamA href={href}>Veja no shazam</ShazamA>
     </Container>
   );
 };
