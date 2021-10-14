@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
-
-
 export const Container = styled.div`
   color: #e61d75;
 `;
 
 export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 500px;
   width: 100%;
 `;
 
@@ -55,4 +57,19 @@ export const TempMinMax = styled.p`
   flex-direction: column;
   text-align: left;
   font-size: 25px;
+`;
+
+export const CardContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+`;
+
+export const BartButton = styled.button`
+  background-color: transparent;
+  .iconHeart {
+    color: #fff;
+    width: 25px;
+  }
 `;
