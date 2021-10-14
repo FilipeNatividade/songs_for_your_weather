@@ -1,3 +1,10 @@
+#meu comentário
+não consegui terminar por que acabou meua acesso da api do shazam, e provavelmente vao bloquear hora por causa do push no git hub.
+só falta salvar no localStorage e puxar as informações de la.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
